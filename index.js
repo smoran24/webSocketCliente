@@ -16,7 +16,7 @@ const conectarWS = () => {
     onWebSocketClose();
     stompCliente = new StompJs.Client({
         //webSocketFactory: () => new WebSocket('ws://localhost:8080/websocket')
-        webSocketFactory: () => new WebSocket('ws://chat-80hl.onrender.com:8080/websocket')
+        webSocketFactory: () => new WebSocket('wss://chat-80hl.onrender.com/websocket')
     });
     stompCliente.onConnect = onConnectSocket;
     stompCliente.onWebSocketClose = onWebSocketClose;
